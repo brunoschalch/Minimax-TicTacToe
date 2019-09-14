@@ -138,9 +138,9 @@ Position calculateNextMove(char board[3][3]) {
 int main() {
     char board[3][3] =
             {
-                    {'X', 'X', 'O'},
-                    {'X', 'O', 'O'},
-                    {0,   0,   0}
+                    {'O', 0, 0},
+                    {0, 0, 0},
+                    {0, 0, 0}
             };
 
     Position bestMove = calculateNextMove(board);
