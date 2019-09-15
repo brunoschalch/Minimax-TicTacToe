@@ -9,11 +9,30 @@ struct Position {
 
 char agent = 'X', human = 'O';
 
+void printBoard(char board[3][3]) {
+    for (int i = 0; i < 3; i++) {
+        for (int j=0; j<3; j++) {
+            if (board[i][j] == 0) {
+                cout << '_';
+            } else {
+                cout << board[i][j];
+            }
+
+            cout << '|';
+
+        }
+
+        cout << endl;
+    }
+}
+
 bool tie(char board[3][3]) {
-    for (int i = 0; i < 3; i++)
-        for (int j = 0; j < 3; j++)
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
             if (board[i][j] == 0)
                 return false;
+        }
+    }
     return true;
 }
 
@@ -66,8 +85,13 @@ int minimax(char board[3][3], int depth, bool isMax) {
     int score = assignValues(board);
 
     // If game is settled return.
-    if (score == 10 || score == -10)
+    if (score == 10 || score == -10) {
+        //cout << "-----" << endl;
+        //cout << "settled " << (isMax ? agent : human) << ", " << score << endl;
+        //printBoard(board);
         return score;
+    }
+
 
     // Tie equals utility of 0.
     if (tie(board))
@@ -106,7 +130,7 @@ int minimax(char board[3][3], int depth, bool isMax) {
 }
 
 // This will return the best possible move for the agent
-Position calculateNextMove(char board[3][3]) {
+Position calculateNextMove(char board[3][3], char player) {
     int bestVal = -1000;
     Position bestMove;
     bestMove.i = -1;
@@ -116,9 +140,12 @@ Position calculateNextMove(char board[3][3]) {
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
             if (board[i][j] == 0) {
-                board[i][j] = agent;
+                board[i][j] = player;
                 // Now we check all possible games the human can play (isMax=false), and the AIs moves recursively.
-                int moveVal = minimax(board, 0, false);
+                int moveVal = minimax(board, 0, player != agent);
+                if (player == human) {
+                    moveVal*=-1;
+                }
                 // Undo
                 board[i][j] = 0;
                 if (moveVal > bestVal) {
@@ -138,15 +165,28 @@ Position calculateNextMove(char board[3][3]) {
 int main() {
     char board[3][3] =
             {
-                    {'O', 0, 0},
+                    {0, 0, 0},
                     {0, 0, 0},
                     {0, 0, 0}
             };
 
-    Position bestMove = calculateNextMove(board);
+    // Initial player;
+    char currentPlayer = agent;
+    for (int i=0; i<9; i++) {
+        Position bestMove = calculateNextMove(board, currentPlayer);
 
-    cout << "The recommended next move for X is :";
-    cout <<  "COL: " << bestMove.j << ", ROW: " << bestMove.i;
+        cout << "The recommended next move for " << currentPlayer << " is :";
+        cout <<  "COL: " << bestMove.j << ", ROW: " << bestMove.i << endl;
+
+        board[bestMove.i][bestMove.j] = currentPlayer;
+
+        printBoard(board);
+        currentPlayer = currentPlayer == agent ? human : agent;
+    }
+
+
+
+
 
     return 0;
 } 
