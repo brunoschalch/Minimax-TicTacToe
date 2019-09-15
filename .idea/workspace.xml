@@ -13,9 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="39fbff53-47bc-4653-acbd-6f0586126de5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TicTacToeMinimax.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TicTacToeMinimax.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TicTacToeMinimax.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TicTacToeMinimax.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TicTacToeMinimax.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TicTacToeMinimax.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,7 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1567651640116</updated>
       <workItem from="1567651641821" duration="8055000" />
-      <workItem from="1568393986323" duration="7879000" />
+      <workItem from="1568393986323" duration="8792000" />
     </task>
     <servers />
   </component>

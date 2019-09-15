@@ -11,7 +11,7 @@ char agent = 'X', human = 'O';
 
 void printBoard(char board[3][3]) {
     for (int i = 0; i < 3; i++) {
-        for (int j=0; j<3; j++) {
+        for (int j = 0; j < 3; j++) {
             if (board[i][j] == 0) {
                 cout << '_';
             } else {
@@ -144,7 +144,7 @@ Position calculateNextMove(char board[3][3], char player) {
                 // Now we check all possible games the human can play (isMax=false), and the AIs moves recursively.
                 int moveVal = minimax(board, 0, player != agent);
                 if (player == human) {
-                    moveVal*=-1;
+                    moveVal *= -1;
                 }
                 // Undo
                 board[i][j] = 0;
@@ -172,21 +172,16 @@ int main() {
 
     // Initial player;
     char currentPlayer = agent;
-    for (int i=0; i<9; i++) {
+    for (int i = 0; i < 9; i++) {
         Position bestMove = calculateNextMove(board, currentPlayer);
 
         cout << "The recommended next move for " << currentPlayer << " is :";
-        cout <<  "COL: " << bestMove.j << ", ROW: " << bestMove.i << endl;
+        cout << "COL: " << bestMove.j << ", ROW: " << bestMove.i << endl;
 
         board[bestMove.i][bestMove.j] = currentPlayer;
 
         printBoard(board);
         currentPlayer = currentPlayer == agent ? human : agent;
     }
-
-
-
-
-
     return 0;
 } 
