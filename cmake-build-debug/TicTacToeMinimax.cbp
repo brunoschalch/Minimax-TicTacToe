@@ -80,6 +80,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/bruno/CLionProjects/TicTacToeMinimax/Node.cpp">
+			<Option target="TicTacToeMinimax"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/CLionProjects/TicTacToeMinimax/Node.h">
+			<Option target="TicTacToeMinimax"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/CLionProjects/TicTacToeMinimax/Tree.cpp">
+			<Option target="TicTacToeMinimax"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/CLionProjects/TicTacToeMinimax/Tree.h">
+			<Option target="TicTacToeMinimax"/>
+		</Unit>
 		<Unit filename="C:/Users/bruno/CLionProjects/TicTacToeMinimax/main.cpp">
 			<Option target="TicTacToeMinimax"/>
 		</Unit>

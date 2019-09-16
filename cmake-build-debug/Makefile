@@ -122,6 +122,60 @@ TicTacToeMinimax/fast:
 	$(MAKE) -f CMakeFiles\TicTacToeMinimax.dir\build.make CMakeFiles/TicTacToeMinimax.dir/build
 .PHONY : TicTacToeMinimax/fast
 
+Node.obj: Node.cpp.obj
+
+.PHONY : Node.obj
+
+# target to build an object file
+Node.cpp.obj:
+	$(MAKE) -f CMakeFiles\TicTacToeMinimax.dir\build.make CMakeFiles/TicTacToeMinimax.dir/Node.cpp.obj
+.PHONY : Node.cpp.obj
+
+Node.i: Node.cpp.i
+
+.PHONY : Node.i
+
+# target to preprocess a source file
+Node.cpp.i:
+	$(MAKE) -f CMakeFiles\TicTacToeMinimax.dir\build.make CMakeFiles/TicTacToeMinimax.dir/Node.cpp.i
+.PHONY : Node.cpp.i
+
+Node.s: Node.cpp.s
+
+.PHONY : Node.s
+
+# target to generate assembly for a file
+Node.cpp.s:
+	$(MAKE) -f CMakeFiles\TicTacToeMinimax.dir\build.make CMakeFiles/TicTacToeMinimax.dir/Node.cpp.s
+.PHONY : Node.cpp.s
+
+Tree.obj: Tree.cpp.obj
+
+.PHONY : Tree.obj
+
+# target to build an object file
+Tree.cpp.obj:
+	$(MAKE) -f CMakeFiles\TicTacToeMinimax.dir\build.make CMakeFiles/TicTacToeMinimax.dir/Tree.cpp.obj
+.PHONY : Tree.cpp.obj
+
+Tree.i: Tree.cpp.i
+
+.PHONY : Tree.i
+
+# target to preprocess a source file
+Tree.cpp.i:
+	$(MAKE) -f CMakeFiles\TicTacToeMinimax.dir\build.make CMakeFiles/TicTacToeMinimax.dir/Tree.cpp.i
+.PHONY : Tree.cpp.i
+
+Tree.s: Tree.cpp.s
+
+.PHONY : Tree.s
+
+# target to generate assembly for a file
+Tree.cpp.s:
+	$(MAKE) -f CMakeFiles\TicTacToeMinimax.dir\build.make CMakeFiles/TicTacToeMinimax.dir/Tree.cpp.s
+.PHONY : Tree.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -158,6 +212,12 @@ help:
 	@echo ... TicTacToeMinimax
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Node.obj
+	@echo ... Node.i
+	@echo ... Node.s
+	@echo ... Tree.obj
+	@echo ... Tree.i
+	@echo ... Tree.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

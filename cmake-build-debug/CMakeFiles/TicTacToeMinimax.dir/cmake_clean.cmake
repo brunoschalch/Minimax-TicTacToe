@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/TicTacToeMinimax.dir/main.cpp.obj"
+  "CMakeFiles/TicTacToeMinimax.dir/Tree.cpp.obj"
+  "CMakeFiles/TicTacToeMinimax.dir/Node.cpp.obj"
   "TicTacToeMinimax.pdb"
   "TicTacToeMinimax.exe"
   "TicTacToeMinimax.exe.manifest"

@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/bruno/CLionProjects/TicTacToeMinimax/Node.cpp" "C:/Users/bruno/CLionProjects/TicTacToeMinimax/cmake-build-debug/CMakeFiles/TicTacToeMinimax.dir/Node.cpp.obj"
+  "C:/Users/bruno/CLionProjects/TicTacToeMinimax/Tree.cpp" "C:/Users/bruno/CLionProjects/TicTacToeMinimax/cmake-build-debug/CMakeFiles/TicTacToeMinimax.dir/Tree.cpp.obj"
   "C:/Users/bruno/CLionProjects/TicTacToeMinimax/main.cpp" "C:/Users/bruno/CLionProjects/TicTacToeMinimax/cmake-build-debug/CMakeFiles/TicTacToeMinimax.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
