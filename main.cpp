@@ -48,6 +48,8 @@ int main() {
         cout << endl;
         cout << endl;
     }
+
+    cout << "---- MINIMAX TREE TRAVERSAL ----" << endl;
     printMaxMinTree(child, true, 0);
     return 0;
 } 
