@@ -2,10 +2,7 @@
 // Created by bruno on 9/15/2019.
 //
 
-#include <iostream>
 #include "Tree.h"
-
-
 
 char agent = 'X', human = 'O';
 
@@ -116,25 +113,15 @@ int Tree::minimax(char board[3][3], int depth, bool isMax, Node* parent) {
 }
 
 void Tree::generateMinimaxTree() {
-
     char board[3][3] =
             {
                     {0, 0, 0},
                     {0, 0, 0},
                     {0, 0, 0}
             };
-
-
-
     char player = agent;
     this->root = new Node(board, 0);
-
-   // calculateNextMove(board, player);
-
     minimax(board, 0 , player==agent,  root);
-
-    cout << "done" << endl;
-
 }
 
 

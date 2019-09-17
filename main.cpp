@@ -10,64 +10,44 @@ void printBoard(char board[3][3]) {
             } else {
                 cout << board[i][j];
             }
-
-            cout << '|';
-
+            if (j<2) {
+                cout << '|';
+            }
         }
-
         cout << endl;
     }
 }
 
 void DFS(Node *root, int depth) {
-    cout << " printing level " << depth << endl;
-    cout << " score: " << root->score << endl;
+    cout << "DFS: Printing level " << depth << endl;
+    cout << "DFS: Score: " << root->score << endl;
     printBoard(root->board);
-
     if (root->children.size() != 0)
         DFS(*(root->children.begin()), depth + 1);
 }
 
 void printMaxMinTree(Node *root, bool isMax, int count) {
-
     if (root->children.size() != 0) {
         Node *maxiMinNode = isMax ? root->getMaxNode() : root->getMinNode();
-        cout << "printing level: " << count << " (" << (isMax ? "max" : "min") << ")" << endl;
-
+        cout << "Printing level: " << count << " (" << (isMax ? "X - max" : "O - min") << ")" << endl;
+        cout << "Score: " << maxiMinNode->score << endl;
         printBoard(maxiMinNode->board);
-
         printMaxMinTree(maxiMinNode, !isMax, count + 1);
     }
-
 }
 
 int main() {
-    char board[3][3] =
-            {
-                    {0, 0, 0},
-                    {0, 0, 0},
-                    {0, 0, 0}
-            };
-
-
     Tree *tree = new Tree();
     tree->generateMinimaxTree();
-
-    cout << "now tree coming" << endl;
-
     Node *child = *(tree->root->children.begin());
-
     list<Node *>::iterator it;
     for (it = child->children.begin(); it != child->children.end(); ++it) {
-        Node *childe = *it;
-
+        Node *current = *it;
         cout << "DFS begins (printing leftmost branch of each child)" << endl;
-        DFS(childe, 0);
+        DFS(current, 0);
         cout << endl;
         cout << endl;
     }
-
-
     printMaxMinTree(child, true, 0);
     return 0;
 } 
