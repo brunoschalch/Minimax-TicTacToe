@@ -67,8 +67,6 @@ int Tree::minimax(char board[3][3], int depth, bool isMax, Node* parent) {
     int score = assignValues(board);
     Node* currentNode = new Node(board, score);
     parent->children.push_back(currentNode);
-  //  cout << "stuff called" << endl;
-
     // If game is settled return.
     if (score == 10 || score == -10) {
 

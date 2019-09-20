@@ -2,6 +2,19 @@
 #include <iostream>
 #include "Tree.h"
 
+// Gerda Lena Matthausch A01756141
+// Ana Sollano Kim A01651072
+// Bruno Schalch A01651187
+// Environment
+// Fully observable, competitive, deterministic, sequential, static, discrete, known.
+//
+// Problem characterization
+// IN(s) = Empty tictactoe board.
+// ACTIONS(s) = Place an X (or an O) on an empty cell.
+// Transition Model: T(B, A) -> T(B', A). In each transition, the board changes.
+// Goal Test: Goal is reached when a player aligns 3 symbols on the board; horizontally, vertically or diagonally. Or when the board is full (a tie).
+// Path Cost: Utility of winning: 10, tie: 0 , loosing: -10
+
 void printBoard(char board[3][3]) {
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
